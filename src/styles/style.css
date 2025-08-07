@@ -1,0 +1,208 @@
+* {
+  transition-duration: 0.5s;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Dancing Script", serif;
+  background-color: rgb(61, 27, 27);
+  display: flex;
+  justify-content: center;
+  min-width: 1024px;
+}
+
+h1 {
+  font-size: 20px;
+  font-family: "Dancing Script", serif;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100vh;
+  padding: 20px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.game__table {
+  height: 470px;
+  width: 470px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 40px;
+  border: #848a50 ridge 5px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row {
+  display: flex;
+  gap: 10px;
+}
+
+.cell {
+  margin: 2px;
+  width: 150px;
+  height: 150px;
+  border: transparent ridge 2px;
+  border-radius: 50px;
+  background-color: rgb(64, 117, 88);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cell-x {
+  font-size: 100px;
+  border-color: #c3d617;
+}
+
+.cell-o {
+  font-size: 100px;
+  border-color: #c3d617;
+}
+
+.cell-win {
+  background-color: #c9d616;
+  transform: rotateY(360deg);
+}
+
+.cell-pat {
+  background-color: rgb(143, 31, 31);
+  transform: rotateY(360deg);
+}
+
+.cell:hover {
+  background-color: #2f6d2f;
+  transform: scale(1.1);
+}
+
+.score_container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.difficult {
+  width: 20px;
+  height: 20px;
+  border: transparent ridge 2px;
+  cursor: pointer;
+}
+
+.difficult_easy {
+  background-color: #2f6d2f;
+}
+
+.difficult_medium {
+  background-color: #c3d617;
+  height: 30px;
+  width: 30px;
+}
+
+.difficult_hard {
+  background-color: #d65c16;
+  height: 40px;
+  width: 40px;
+}
+
+.difficult_active {
+  border: #f5f5f8 ridge 2px;
+  border-radius: 20px;
+  transform: scale(1.1);
+}
+
+.difficult_container {
+  display: flex;
+  height: auto;
+  width: auto;
+  margin-bottom: 20px;
+  gap: 20px;
+  align-items: center;
+  border: #848a50 ridge 5px;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.player {
+  background-color: rgb(143, 31, 31);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px ridge #848a50;
+  border-radius: 75px;
+  width: 150px;
+  height: 150px;
+  text-shadow: 2px 2px 4px #141414;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.player_vs {
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  width: 75px;
+  height: 75px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.player_vs:hover {
+  background-color: #2f6d2f;
+  transform: scale(1.1);
+}
+
+.player_vs_computer {
+  background-color: #2f6d2f;
+  transform: scale(1.1);
+}
+
+.player_restart {
+  justify-content: center;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.player_restart:hover {
+  background-color: #2f6d2f;
+  transform: scale(1.1);
+}
+
+.player_one {
+  background-color: green;
+  transform: scale(1.2);
+}
+
+.score {
+  font-size: 50px;
+  color: #b9bba3;
+}
+
+.win_message {
+  font-size: 50px;
+  color: #b9bba3;
+  text-shadow: 2px 2px 4px #141414;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background-image: url(../images/king-crown-vector-png-13.png);
+  background-size: cover;
+}
+
+span {
+  position: absolute;
+  top: 70%;
+  transform: translate(-50%, -50%);
+}
